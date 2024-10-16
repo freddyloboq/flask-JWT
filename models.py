@@ -8,7 +8,7 @@ class User(db.Model):
   nombre = db.Column(db.String(50), nullable=False)
   apellido = db.Column(db.String(50), nullable=False)
   email = db.Column(db.String(50), nullable=False, unique=True)
-  password = db.Column(db.String(16), nullable=False)
+  password = db.Column(db.String, nullable=False)
 
   def serialize(self):
     return {
